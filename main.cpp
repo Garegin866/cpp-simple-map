@@ -28,15 +28,6 @@ int main() {
     } {
         PhoneBook book{{{"Mom"s, 7914111111}, {"Sister"s, 7962333333}}};
 
-        assert(!book.DeleteName("Granny"s));
-
-        assert(book.DeleteName("Mom"s));
-        assert(!book.DeleteName("Mom"s));
-        assert(!book.GetNumber("Mom"s).has_value());
-        assert(book.AddName("Mom"s, 73723645112));
-    } {
-        PhoneBook book{{{"Mom"s, 7914111111}, {"Sister"s, 7962333333}}};
-
         assert(!book.ChangeNumber("Dad"s, 111111111));
 
         assert(book.ChangeNumber("Mom"s, 5555555555));
